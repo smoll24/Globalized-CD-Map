@@ -1,0 +1,191 @@
+[gd_scene load_steps=30 format=3 uid="uid://bffdscrcy2jpi"]
+
+[ext_resource type="Texture2D" uid="uid://cnks71yf07apk" path="res://assets/ui/DarkOakFrameLeft.png" id="1_gxlii"]
+[ext_resource type="Script" path="res://src/ui/overlay_frame.gd" id="1_vljik"]
+[ext_resource type="Texture2D" uid="uid://bxlv0q7v3amgr" path="res://assets/ui/DarkOakFrameTop.png" id="2_m1ah1"]
+[ext_resource type="Texture2D" uid="uid://ceprvqk1y5l35" path="res://assets/ui/DarkOakFrameRight.png" id="3_bvhct"]
+[ext_resource type="Texture2D" uid="uid://b7kh14tvy88ms" path="res://assets/ui/DarkOakFrameBottom.png" id="4_rxicp"]
+[ext_resource type="Texture2D" uid="uid://0qggyupoqcq" path="res://assets/ui/label-153093_1280.png" id="5_2fgcc"]
+[ext_resource type="FontFile" uid="uid://bocxbwg1vpijp" path="res://assets/fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf" id="6_q0cwf"]
+[ext_resource type="Texture2D" uid="uid://djrqo28t2s0lh" path="res://assets/ui/CD_icon_test.svg.png" id="7_48lvx"]
+[ext_resource type="Script" path="res://src/ui/cd_sprite.gd" id="8_o570a"]
+[ext_resource type="Texture2D" uid="uid://cmfplpyw4ry48" path="res://assets/ui/image-388.png" id="9_l54ed"]
+[ext_resource type="Texture2D" uid="uid://cwedgwjl2wxum" path="res://assets/ui/buttons/number1.png" id="10_yd3tp"]
+[ext_resource type="Texture2D" uid="uid://cbdbx25gov6b3" path="res://assets/ui/buttons/hover_number1.png" id="11_wn4dq"]
+[ext_resource type="Texture2D" uid="uid://dhg76t5rtojud" path="res://assets/ui/buttons/number2.png" id="12_1yc16"]
+[ext_resource type="Texture2D" uid="uid://dso8dink1u82d" path="res://assets/ui/buttons/hover_number2.png" id="13_gigx5"]
+[ext_resource type="Texture2D" uid="uid://du28taa0tp0ta" path="res://assets/ui/buttons/number3.png" id="14_sstn2"]
+[ext_resource type="Texture2D" uid="uid://lk8ndkb17hjm" path="res://assets/ui/buttons/hover_number3.png" id="15_jlhoc"]
+[ext_resource type="Texture2D" uid="uid://cpeybkhhaym8x" path="res://assets/ui/buttons/number4.png" id="16_7rewy"]
+[ext_resource type="Texture2D" uid="uid://cftvpjueysn33" path="res://assets/ui/buttons/hover_number4.png" id="17_oct4w"]
+[ext_resource type="Texture2D" uid="uid://bdl60j4vcxieg" path="res://assets/ui/buttons/number5.png" id="18_sha06"]
+[ext_resource type="Texture2D" uid="uid://bo6rgd7dxktwc" path="res://assets/ui/buttons/hover_number5.png" id="19_pra8a"]
+[ext_resource type="Texture2D" uid="uid://dxhg28ylmwa64" path="res://assets/ui/buttons/number6.png" id="20_6min5"]
+[ext_resource type="Texture2D" uid="uid://6w7lhfcw5ph4" path="res://assets/ui/buttons/hover_number6.png" id="21_dhexp"]
+[ext_resource type="Texture2D" uid="uid://di2wkwtfa2lil" path="res://assets/ui/buttons/number7.png" id="22_yh3pp"]
+[ext_resource type="Texture2D" uid="uid://ckxckii18akqn" path="res://assets/ui/buttons/hover_number7.png" id="23_s24x5"]
+[ext_resource type="Texture2D" uid="uid://c71i7171hw5d8" path="res://assets/ui/buttons/number8.png" id="24_oljw3"]
+[ext_resource type="Texture2D" uid="uid://4siunhuthwcg" path="res://assets/ui/buttons/hover_number8.png" id="25_eroq3"]
+[ext_resource type="Texture2D" uid="uid://5d1hjr3mos2e" path="res://assets/ui/buttons/number9.png" id="26_behio"]
+[ext_resource type="Texture2D" uid="uid://blse5skn7lq0" path="res://assets/ui/buttons/hover_number9.png" id="27_8u55c"]
+[ext_resource type="PackedScene" uid="uid://cegb4qoxg5qgu" path="res://src/ui/overlay_info.tscn" id="29_wjoi0"]
+
+[node name="overlay_frame" type="CanvasLayer"]
+script = ExtResource("1_vljik")
+
+[node name="frame" type="Node2D" parent="."]
+
+[node name="frame_left" type="Sprite2D" parent="frame"]
+position = Vector2(14.75, 559.5)
+scale = Vector2(0.611111, 1.76856)
+texture = ExtResource("1_gxlii")
+
+[node name="frame_top" type="Sprite2D" parent="frame"]
+position = Vector2(944, 16)
+scale = Vector2(2.11983, 0.655172)
+texture = ExtResource("2_m1ah1")
+
+[node name="frame_bottom" type="Sprite2D" parent="frame"]
+position = Vector2(1008.5, 1067.5)
+scale = Vector2(2.08988, 0.557143)
+texture = ExtResource("4_rxicp")
+
+[node name="frame_right" type="Sprite2D" parent="frame"]
+position = Vector2(1900, 559.5)
+scale = Vector2(0.666666, 1.86172)
+texture = ExtResource("3_bvhct")
+
+[node name="title_label_bg" type="Sprite2D" parent="."]
+position = Vector2(395, 62.0003)
+scale = Vector2(0.436035, 0.266797)
+texture = ExtResource("5_2fgcc")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -773.0
+offset_top = -1042.0
+offset_right = -351.0
+offset_bottom = -987.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.976471, 0.65098, 0.239216, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_fonts/font = ExtResource("6_q0cwf")
+theme_override_font_sizes/font_size = 35
+text = "Traces of a Globalized CD"
+horizontal_alignment = 1
+
+[node name="cds" type="Sprite2D" parent="."]
+position = Vector2(1821, 995)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_l54ed")
+
+[node name="cd_sprite" type="Sprite2D" parent="."]
+position = Vector2(100, 89)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_48lvx")
+script = ExtResource("8_o570a")
+
+[node name="buttons" type="Node2D" parent="."]
+position = Vector2(232, 0)
+
+[node name="one" type="TextureButton" parent="buttons"]
+offset_left = 922.0
+offset_top = 9.0
+offset_right = 1356.0
+offset_bottom = 452.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("10_yd3tp")
+texture_hover = ExtResource("11_wn4dq")
+
+[node name="two" type="TextureButton" parent="buttons"]
+offset_left = 1023.0
+offset_top = 8.0
+offset_right = 1465.0
+offset_bottom = 456.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("12_1yc16")
+texture_hover = ExtResource("13_gigx5")
+
+[node name="three" type="TextureButton" parent="buttons"]
+offset_left = 1130.0
+offset_top = 9.0
+offset_right = 1581.0
+offset_bottom = 461.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("14_sstn2")
+texture_hover = ExtResource("15_jlhoc")
+
+[node name="four" type="TextureButton" parent="buttons"]
+offset_left = 1238.0
+offset_top = 7.0
+offset_right = 1672.0
+offset_bottom = 450.0
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("16_7rewy")
+texture_hover = ExtResource("17_oct4w")
+
+[node name="five" type="TextureButton" parent="buttons"]
+offset_left = 1343.0
+offset_top = 8.0
+offset_right = 1777.0
+offset_bottom = 451.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("18_sha06")
+texture_hover = ExtResource("19_pra8a")
+
+[node name="six" type="TextureButton" parent="buttons"]
+offset_left = 1447.0
+offset_top = 8.0
+offset_right = 1889.0
+offset_bottom = 451.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("20_6min5")
+texture_hover = ExtResource("21_dhexp")
+
+[node name="seven" type="TextureButton" parent="buttons"]
+offset_left = 1554.0
+offset_top = 7.0
+offset_right = 1988.0
+offset_bottom = 450.0
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("22_yh3pp")
+texture_hover = ExtResource("23_s24x5")
+
+[node name="eight" type="TextureButton" parent="buttons"]
+visible = false
+offset_left = 1665.0
+offset_top = 6.00001
+offset_right = 2099.0
+offset_bottom = 449.0
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("24_oljw3")
+texture_hover = ExtResource("25_eroq3")
+
+[node name="nine" type="TextureButton" parent="buttons"]
+visible = false
+offset_left = 1771.0
+offset_top = 5.99999
+offset_right = 2205.0
+offset_bottom = 449.0
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("26_behio")
+texture_hover = ExtResource("27_8u55c")
+
+[node name="overlay_info" parent="." instance=ExtResource("29_wjoi0")]
+visible = false
+
+[connection signal="pressed" from="buttons/one" to="." method="_on_one_pressed"]
+[connection signal="pressed" from="buttons/two" to="." method="_on_two_pressed"]
+[connection signal="pressed" from="buttons/three" to="." method="_on_three_pressed"]
+[connection signal="pressed" from="buttons/four" to="." method="_on_four_pressed"]
+[connection signal="pressed" from="buttons/five" to="." method="_on_five_pressed"]
+[connection signal="pressed" from="buttons/six" to="." method="_on_six_pressed"]
+[connection signal="pressed" from="buttons/seven" to="." method="_on_seven_pressed"]
+[connection signal="pressed" from="buttons/eight" to="." method="_on_eight_pressed"]
+[connection signal="pressed" from="buttons/nine" to="." method="_on_nine_pressed"]

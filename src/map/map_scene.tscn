@@ -1,0 +1,231 @@
+[gd_scene load_steps=13 format=3 uid="uid://cpevnkpygftla"]
+
+[ext_resource type="Script" path="res://src/map/main.gd" id="1_6pmif"]
+[ext_resource type="Texture2D" uid="uid://ccgq70ch44c70" path="res://assets/map/vector-world-map-v2.2.png" id="2_grjdl"]
+[ext_resource type="Script" path="res://src/map/camera_controller.gd" id="2_sakpr"]
+[ext_resource type="Texture2D" uid="uid://ikm1e2dfa51d" path="res://assets/ui/randoogle_Thumbtack_Pushpin.png" id="3_hyd1u"]
+[ext_resource type="PackedScene" uid="uid://3e5fdq673q8w" path="res://src/ui/overlay_legend.tscn" id="4_of2wn"]
+[ext_resource type="PackedScene" uid="uid://bffdscrcy2jpi" path="res://src/ui/overlay_frame.tscn" id="5_tuosk"]
+[ext_resource type="Texture2D" uid="uid://bmtmcm6ynqsxf" path="res://assets/ui/thumb_b.png" id="7_1af5o"]
+[ext_resource type="Texture2D" uid="uid://ck6e2c21aors8" path="res://assets/ui/thumb_g.png" id="8_cg7t7"]
+[ext_resource type="Texture2D" uid="uid://c8cx3usqvye7m" path="res://assets/ui/thumb_br.png" id="9_opdvq"]
+[ext_resource type="Texture2D" uid="uid://6l5vceaqcpk1" path="res://assets/ui/thumb_o.png" id="10_1drfq"]
+[ext_resource type="Texture2D" uid="uid://c80dfhp3kpqrg" path="res://assets/ui/thumb_y.png" id="11_alh1i"]
+[ext_resource type="Texture2D" uid="uid://c05k1e4g2abv0" path="res://assets/ui/thumb_p.png" id="12_72rf2"]
+
+[node name="Map_Scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6pmif")
+
+[node name="map_sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_grjdl")
+
+[node name="camera" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+script = ExtResource("2_sakpr")
+
+[node name="overlay_legend" parent="." instance=ExtResource("4_of2wn")]
+
+[node name="overlay_frame" parent="." instance=ExtResource("5_tuosk")]
+
+[node name="polycarbonate" type="Node2D" parent="."]
+
+[node name="pin" type="Sprite2D" parent="polycarbonate"]
+position = Vector2(1499, -254)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("3_hyd1u")
+
+[node name="pin2" type="Sprite2D" parent="polycarbonate"]
+position = Vector2(1918, -193)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_hyd1u")
+
+[node name="pin3" type="Sprite2D" parent="polycarbonate"]
+position = Vector2(2083, -222)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("3_hyd1u")
+
+[node name="pin4" type="Sprite2D" parent="polycarbonate"]
+position = Vector2(-1505, -292)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_hyd1u")
+
+[node name="pin5" type="Sprite2D" parent="polycarbonate"]
+position = Vector2(145, -419)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_hyd1u")
+
+[node name="pin6" type="Sprite2D" parent="polycarbonate"]
+position = Vector2(1550, 134)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("3_hyd1u")
+
+[node name="pin7" type="Sprite2D" parent="polycarbonate"]
+position = Vector2(1859, 26)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_hyd1u")
+
+[node name="aluminum" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="aluminum"]
+position = Vector2(-1650, -786)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_1af5o")
+
+[node name="Sprite2D2" type="Sprite2D" parent="aluminum"]
+position = Vector2(1218, -882)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_1af5o")
+
+[node name="Sprite2D3" type="Sprite2D" parent="aluminum"]
+position = Vector2(853, 22)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_1af5o")
+
+[node name="Sprite2D4" type="Sprite2D" parent="aluminum"]
+position = Vector2(1189, -14)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("7_1af5o")
+
+[node name="Sprite2D5" type="Sprite2D" parent="aluminum"]
+position = Vector2(1601, 348)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("7_1af5o")
+
+[node name="Sprite2D6" type="Sprite2D" parent="aluminum"]
+position = Vector2(114, -716)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("7_1af5o")
+
+[node name="Sprite2D7" type="Sprite2D" parent="aluminum"]
+position = Vector2(70, -495)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("7_1af5o")
+
+[node name="Sprite2D8" type="Sprite2D" parent="aluminum"]
+position = Vector2(2038, 820)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_1af5o")
+
+[node name="Sprite2D9" type="Sprite2D" parent="aluminum"]
+position = Vector2(768, -4)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_1af5o")
+
+[node name="lacquer" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="lacquer"]
+position = Vector2(1360, -278)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_cg7t7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="lacquer"]
+position = Vector2(1279, 20)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_cg7t7")
+
+[node name="Sprite2D3" type="Sprite2D" parent="lacquer"]
+position = Vector2(139, -506)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_cg7t7")
+
+[node name="recording" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="recording"]
+position = Vector2(-1114, -389)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_opdvq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="recording"]
+position = Vector2(-97, -501)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_opdvq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="recording"]
+position = Vector2(52, -322)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_opdvq")
+
+[node name="Sprite2D4" type="Sprite2D" parent="recording"]
+position = Vector2(-18, -463)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_opdvq")
+
+[node name="manufac" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="manufac"]
+position = Vector2(-1526, 94)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_1drfq")
+
+[node name="distrib" type="Node2D" parent="."]
+
+[node name="pin4" type="Sprite2D" parent="distrib"]
+position = Vector2(-1659, -351)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("11_alh1i")
+
+[node name="pin5" type="Sprite2D" parent="distrib"]
+position = Vector2(236, -185)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("11_alh1i")
+
+[node name="pin6" type="Sprite2D" parent="distrib"]
+position = Vector2(-98, -305)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("11_alh1i")
+
+[node name="pin7" type="Sprite2D" parent="distrib"]
+position = Vector2(2080, -338)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_alh1i")
+
+[node name="pin8" type="Sprite2D" parent="distrib"]
+position = Vector2(-1634, -41)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_alh1i")
+
+[node name="pin9" type="Sprite2D" parent="distrib"]
+position = Vector2(46, -415)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("11_alh1i")
+
+[node name="pin10" type="Sprite2D" parent="distrib"]
+position = Vector2(-1497, -776)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_alh1i")
+
+[node name="waste" type="Node2D" parent="."]
+
+[node name="bauxite" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="bauxite"]
+position = Vector2(2149, 791)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("12_72rf2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="bauxite"]
+position = Vector2(1654, -264)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("12_72rf2")
+
+[node name="Sprite2D3" type="Sprite2D" parent="bauxite"]
+position = Vector2(-762, 548)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_72rf2")
+
+[node name="Sprite2D4" type="Sprite2D" parent="bauxite"]
+position = Vector2(1184, 157)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("12_72rf2")
+
+[node name="Sprite2D5" type="Sprite2D" parent="bauxite"]
+position = Vector2(-160, 253)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_72rf2")

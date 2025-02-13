@@ -1,0 +1,479 @@
+[gd_scene load_steps=12 format=3 uid="uid://cegb4qoxg5qgu"]
+
+[ext_resource type="Texture2D" uid="uid://cnks71yf07apk" path="res://assets/ui/DarkOakFrameLeft.png" id="1_1gaey"]
+[ext_resource type="Script" path="res://src/ui/overlay_info.gd" id="1_ympdt"]
+[ext_resource type="Texture2D" uid="uid://bxlv0q7v3amgr" path="res://assets/ui/DarkOakFrameTop.png" id="2_dthhq"]
+[ext_resource type="Texture2D" uid="uid://b7kh14tvy88ms" path="res://assets/ui/DarkOakFrameBottom.png" id="3_0f1w7"]
+[ext_resource type="FontFile" uid="uid://bf7hq10acq6ja" path="res://assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf" id="3_qbj3e"]
+[ext_resource type="Texture2D" uid="uid://ceprvqk1y5l35" path="res://assets/ui/DarkOakFrameRight.png" id="4_hssna"]
+[ext_resource type="FontFile" uid="uid://cs7yelj0p133f" path="res://assets/fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf" id="4_ulqg0"]
+[ext_resource type="FontFile" uid="uid://bocxbwg1vpijp" path="res://assets/fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf" id="5_h6ts3"]
+[ext_resource type="FontFile" uid="uid://dlcj0vvtpgixn" path="res://assets/fonts/Roboto/static/Roboto-SemiBold.ttf" id="5_oygdh"]
+[ext_resource type="Texture2D" uid="uid://ciuqlobnabnmg" path="res://assets/ui/PlayStation_button_X2.png" id="7_nca8i"]
+[ext_resource type="Texture2D" uid="uid://cwgj5lrx5i0ke" path="res://assets/ui/hover_PlayStation_button_X2.png" id="8_ivsvw"]
+
+[node name="overlay_info" type="CanvasLayer"]
+script = ExtResource("1_ympdt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -634.0
+offset_top = 105.0
+offset_right = -23.0
+offset_bottom = -27.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(1, 1, 1, 0.729412)
+
+[node name="frame" type="Node2D" parent="."]
+
+[node name="frame_left" type="Sprite2D" parent="frame"]
+position = Vector2(1289, 579)
+scale = Vector2(0.261103, 1.39156)
+texture = ExtResource("1_1gaey")
+
+[node name="frame_top" type="Sprite2D" parent="frame"]
+position = Vector2(1591.66, 109)
+scale = Vector2(0.639135, 0.284483)
+texture = ExtResource("2_dthhq")
+
+[node name="frame_bottom" type="Sprite2D" parent="frame"]
+position = Vector2(1590.75, 1048)
+scale = Vector2(0.641012, 0.249999)
+texture = ExtResource("3_0f1w7")
+
+[node name="frame_right" type="Sprite2D" parent="frame"]
+position = Vector2(1893, 578)
+scale = Vector2(0.268319, 1.38865)
+texture = ExtResource("4_hssna")
+
+[node name="close" type="TextureButton" parent="."]
+offset_left = 1821.0
+offset_top = 130.0
+offset_right = 1871.0
+offset_bottom = 180.0
+texture_normal = ExtResource("7_nca8i")
+texture_hover = ExtResource("8_ivsvw")
+
+[node name="one" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="one"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 139.0
+offset_right = 1753.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_h6ts3")
+theme_override_font_sizes/font_size = 35
+text = "What are the ingredients?"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="one"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.081
+offset_left = 1322.0
+offset_top = 209.0
+offset_right = 1708.48
+offset_bottom = 1013.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_qbj3e")
+theme_override_fonts/italics_font = ExtResource("4_ulqg0")
+theme_override_fonts/bold_font = ExtResource("5_oygdh")
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "A CD is made up of three layers of materials:
+
+🔴 A first base layer of [b]polycarbonate plastic[/b]
+🔵 A second thin layer of [b]aluminum coating[/b]
+🟢 A third clear [b] lacquer coating[/b] for protection
+
+[b]🔴 Polycarbonate plastic[/b]
+- CDs are 90% polycarbonate
+- Robust but can easily be scratched, which is why a protective layer is added to protect the CD
+- Falls into the polyester family of plastics
+- Manufacturing process based on the reaction of bisphenol A (BPA or Bis-A) and phosgene
+- Top exporters are [b]South Korea, Germany, the United States, China, Japan, Thailand and Taiwan[/b]
+- Highly concentrated market, as the 5 largest manufacturers posses about 75% of total world capacity
+
+[b]🔵 Aluminum coating[/b]
+- CDs use aluminum for the reflective layer, mainly because it is inexpensive and easy to apply
+🟣 Originates from [b]bauxite[/b], an ore typically found in the topsoil of tropical and subtropical regions
+🟣 Leaders in bauxite production include [b]Australia, China, Brazil, India and Guinea[/b]
+- Aluminum within the bauxite ore is chemically extracted into alumina
+- The alumina is smelted into pure aluminum metal
+- Top exporters are [b]Canada, Russia, the United Arab Emirates, India, Malaysia, Norway, the Netherlands, Australia, and Bahrain[/b]
+- The top 6 manufacturers generate almost half 49.2% of aluminum shipments
+[b]
+🟢 Lacquer coating[/b]
+- Provides a clear, flexible film protecting against moisture and contaminants
+- Made from resin extracted from trees and waxes
+- Protective lacquer applied to CDs is typically a clear, UV-curable acrylic polymer
+- Top exporters are [b]China, India, and Germany[/b]
+"
+
+[node name="two" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="two"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 139.0
+offset_right = 1753.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_h6ts3")
+theme_override_font_sizes/font_size = 35
+text = "How is a CD made?"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="two"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.081
+offset_left = 1322.0
+offset_top = 209.0
+offset_right = 1708.48
+offset_bottom = 1013.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_qbj3e")
+theme_override_fonts/italics_font = ExtResource("4_ulqg0")
+theme_override_fonts/bold_font = ExtResource("5_oygdh")
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "- Compact Disc
+- Portable storage medium that can record, store and play back audio
+
+[b]Manufacturing[/b]
+- CD encodes data physically using pits and lands, physical higher and lower points
+- Glass master disc first created --> Inverse of the final compact discs
+- The pits and lands of a glass master are respectively lands and pits on the final CD
+- Glass master is used to press the data layer of a CD
+🔵 Data layer then coated with a very thin layer of reflective metal (typically aluminum)
+- A CD player uses a laser beam to read these layers and convert the reflection first into an electrical signal and then into music
+🔴 Then sandwiched between protective layers of polycarbonate
+🟢 A clear lacquer is applied to the disc to help protect the underlying layers from physical damage (i.e. scratches)
+
+[b]Bury the Hatchet - The Cranberries[/b]
+- Irish band
+
+Recorded at:
+🟤Metalworks Studios (Mississauga, Ontario, Canada)
+🟤Windmill Lane Studios (Dublin, Ireland)
+🟤 Studio Miraval (Correns, France)
+🟤 Sarm West Studios (London, United Kingdom)
+
+Manufactured by:
+🟠PolyGram Discos, S.A. De C.V. (Mexico)
+🟠Pressed by Cinram, Mexico
+🟠Glass Mastered at Cinram, Mexico
+
+
+"
+
+[node name="three" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="three"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 139.0
+offset_right = 1753.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_h6ts3")
+theme_override_font_sizes/font_size = 35
+text = "Working conditions"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="three"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.081
+offset_left = 1322.0
+offset_top = 209.0
+offset_right = 1708.48
+offset_bottom = 1013.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_qbj3e")
+theme_override_fonts/italics_font = ExtResource("4_ulqg0")
+theme_override_fonts/bold_font = ExtResource("5_oygdh")
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "🔴 [b]Polycarbonate Production (South Korea, Germany, the United States, China, Japan, Thailand, Taiwan)[/b]
+- Chemical plant workers, polymer scientists, machine operators
+- Exposure to toxic chemicals like Bisphenol A (BPA) and phosgene
+- Liable to respiratory issues, skin irritation, and long-term exposure concerns
+- Often produced in highly industrialized areas with strict environmental laws
+- Lesser environmental laws in Asian countries
+
+🟣🔵 [b]Aluminum Production[/b]
+- Miners, smelters, refinery workers
+🟣[b]Bauxite mining (Australia, China, Brazil, India and Guinea)[/b]
+- Open-pit mining can cause lung disease from dust exposure
+- Low wages, harsh physical labor, long hours
+🔵[b]Aluminum (Canada, Russia, UAE, India, Malaysia, Norway, the Netherlands, Australia, Bahrain)[/b]
+- Requires high heat and dangerous chemicals
+- Plants in China & India have been criticized for poor worker protection
+
+🟢 [b]Lacquer Production (China, India, and Germany)[/b]
+- Chemical plant workers and specialists
+- Exposed to toxic fumes from UV-curable acrylics and carcinogenic chemicals
+- Protective gear required in developed countries
+- Worse conditions in India and China
+
+🟤 [b]Studio Recording (Ireland, UK, France, Canada)[/b]
+- Band and producers
+- Safe and highly regulated work environment
+
+🟠 [b]CD Manufacturing & Assembly (Mexico – Cinram & PolyGram Discos)[/b]
+- Factory workers, quality control inspectors, machine operators
+- Fast-paced repetitive labor
+- Lower wages (close to minimum wage in Mexico)
+- Exposure to industrial solvents and adhesives
+- Long shifts"
+
+[node name="four" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="four"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 139.0
+offset_right = 1753.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_h6ts3")
+theme_override_font_sizes/font_size = 35
+text = "Transport"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="four"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.081
+offset_left = 1322.0
+offset_top = 209.0
+offset_right = 1708.48
+offset_bottom = 1013.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_qbj3e")
+theme_override_fonts/italics_font = ExtResource("4_ulqg0")
+theme_override_fonts/bold_font = ExtResource("5_oygdh")
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "🔴 [b]Transport of Polycarbonate[/b]
+- Exported from South Korea, Germany, U.S., China, Japan → to Mexico for CD manufacturing
+- Shipped in large cargo ships in bulk containers
+
+🔵🟣 [b]Transport of Bauxite/Aluminum[/b]
+- Bauxite ore transported from mines in Australia, Guinea, Brazil, India → to alumina refineries (China, UAE, Canada)
+- After refining, aluminum ingots are shipped to CD production plants
+- Transported in cargo ships or by rail
+
+🟢 [b]Transport of Lacquer Coating[/b]
+- Shipped as liquid chemicals in sealed containers
+- Exported from China, India, Germany → to Mexico for CD manufacturing
+- Transported by ship
+
+🟠🟡 [b]CD Manufacturing → Global Distribution[/b]
+- Mexico (Cinram, PolyGram Discos) → US, Europe, Asia
+- Bulk shipments of CDs via air freight & container ships
+- Sent to record labels, retailers (e.g., Walmart, Amazon), and libraries
+- Retailers use trucks and rail to distribute CDs to stores"
+
+[node name="five" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="five"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 139.0
+offset_right = 1753.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_h6ts3")
+theme_override_font_sizes/font_size = 35
+text = "Where is a CD sold?"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="five"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.081
+offset_left = 1322.0
+offset_top = 209.0
+offset_right = 1708.48
+offset_bottom = 1013.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_qbj3e")
+theme_override_fonts/italics_font = ExtResource("4_ulqg0")
+theme_override_fonts/bold_font = ExtResource("5_oygdh")
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "- Distributed globally through wholesalers, retailers, online platforms, and music industry distributors
+- While CDs peaked in sales in the early 2000s, streaming has greatly reduced demand globally
+
+🟡[b]Japan, the US, South Korea, and Germany[/b] have the biggest CD markets
+
+🟡Top sales of [b]Bury the Hatchet by The Cranberries[/b]:
+- United States (500,000 units sold)
+- France (300,000)
+- Germany (250,000)
+- Italy (250,000)
+- Spain (200,000)
+- Canada (100,000)
+- Japan (100,000)
+- Mexico (75,000)
+- United Kingdom (60,000)"
+
+[node name="six" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="six"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 139.0
+offset_right = 1753.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_h6ts3")
+theme_override_font_sizes/font_size = 35
+text = "How are the prices set?"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="six"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.081
+offset_left = 1322.0
+offset_top = 209.0
+offset_right = 1708.48
+offset_bottom = 1013.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_qbj3e")
+theme_override_fonts/italics_font = ExtResource("4_ulqg0")
+theme_override_fonts/bold_font = ExtResource("5_oygdh")
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Manufacturing & Production Costs (~$1–$3 per CD)[/b]
+- Materials (polycarbonate, aluminum, lacquer)
+- Pressing and printing 
+- Packaging
+
+[b]Licensing / Royalties (~$2–$5 per CD)[/b]
+- Record labels pay royalties to artists, producers, and songwriters
+- Songwriters get paid through performance rights organizations
+
+[b]Distribution (~$2–$4 per CD)[/b]
+- Labels sell to wholesalers or directly to major retailers
+- Shipping, logistics, and storage costs
+
+[b]Retailer Markup (~$5–$10 per CD)[/b]
+- Retailers mark up CDs to cover costs and profit
+- Store typically earns $2-$8 per CD depending on cost
+- In the late 1990s -> new CDs sold for $15–$20
+- Currently -> range from $10–$15 or > $20 (limited editions)"
+
+[node name="seven" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="seven"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 139.0
+offset_right = 1753.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_h6ts3")
+theme_override_font_sizes/font_size = 35
+text = "Death of a CD"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="seven"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.081
+offset_left = 1322.0
+offset_top = 209.0
+offset_right = 1708.48
+offset_bottom = 1013.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_qbj3e")
+theme_override_fonts/italics_font = ExtResource("4_ulqg0")
+theme_override_fonts/bold_font = ExtResource("5_oygdh")
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "- Many CDs are resold or traded in second-hand markets
+- Donated to [b]thrift stores and libraries[/b]
+- Sold through online marketplaces (Discogs, eBay, Amazon, Facebook Marketplace)
+- Bought by record stores to be resold
+
+- CDs can be recycled -> but [b]not[/b] in regular curbside bins because of polycarbonate plastic and aluminum.
+- Specialized e-waste recycling centers accept CDs
+- CDs are shredded into small pieces, plastic melted and repurposed into automobile parts or building materials
+- Aluminum layer removed and recycled separately
+
+- Most CDs end up in landfills, but not biodegradable"
+
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]

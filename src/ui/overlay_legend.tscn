@@ -1,0 +1,197 @@
+[gd_scene load_steps=20 format=3 uid="uid://3e5fdq673q8w"]
+
+[ext_resource type="FontFile" uid="uid://bocxbwg1vpijp" path="res://assets/fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf" id="1_8ub4a"]
+[ext_resource type="Texture2D" uid="uid://cnks71yf07apk" path="res://assets/ui/DarkOakFrameLeft.png" id="1_pj57u"]
+[ext_resource type="Theme" uid="uid://b7h3uqer4w7w4" path="res://src/ui/checkbox.tres" id="2_qcp3v"]
+[ext_resource type="Texture2D" uid="uid://bxlv0q7v3amgr" path="res://assets/ui/DarkOakFrameTop.png" id="2_tql6u"]
+[ext_resource type="Texture2D" uid="uid://b7kh14tvy88ms" path="res://assets/ui/DarkOakFrameBottom.png" id="3_ekboh"]
+[ext_resource type="FontFile" uid="uid://cpr2xxv3uxkig" path="res://assets/fonts/Rubik/Rubik-VariableFont_wght.ttf" id="3_uglnd"]
+[ext_resource type="Texture2D" uid="uid://ceprvqk1y5l35" path="res://assets/ui/DarkOakFrameRight.png" id="4_7u53b"]
+[ext_resource type="Texture2D" uid="uid://c5n5f32042mej" path="res://assets/ui/check_b.png" id="8_8cao4"]
+[ext_resource type="Texture2D" uid="uid://bshi7hu5g55ot" path="res://assets/ui/uncheck_b.png" id="9_5bmmq"]
+[ext_resource type="Texture2D" uid="uid://nicemec8d5eg" path="res://assets/ui/check_g.png" id="10_mhtej"]
+[ext_resource type="Texture2D" uid="uid://cwc040v0ovlfe" path="res://assets/ui/uncheck_g.png" id="11_hcmg5"]
+[ext_resource type="Texture2D" uid="uid://dh5iyhnawmkhs" path="res://assets/ui/heck_br.png" id="12_c5pii"]
+[ext_resource type="Texture2D" uid="uid://k6lduvlkcn10" path="res://assets/ui/uncheck_br.png" id="13_e0t2n"]
+[ext_resource type="Texture2D" uid="uid://bpc75yr4asgwy" path="res://assets/ui/check_o.png" id="14_epwlh"]
+[ext_resource type="Texture2D" uid="uid://do1ko3corc5n" path="res://assets/ui/uncheck_o.png" id="15_rpfny"]
+[ext_resource type="Texture2D" uid="uid://cyhf61dnjwnog" path="res://assets/ui/check_y.png" id="16_duwsf"]
+[ext_resource type="Texture2D" uid="uid://bhy88fttmhxc6" path="res://assets/ui/uncheck_y.png" id="17_vksuy"]
+[ext_resource type="Texture2D" uid="uid://duis4nt5uqbos" path="res://assets/ui/check_p.png" id="18_ghbde"]
+[ext_resource type="Texture2D" uid="uid://dy5y6mtvyfx26" path="res://assets/ui/uncheck_p.png" id="19_qqork"]
+
+[node name="overlay_legend" type="CanvasLayer"]
+
+[node name="frame" type="Node2D" parent="."]
+
+[node name="frame_left" type="Sprite2D" parent="frame"]
+position = Vector2(51.7752, 819)
+scale = Vector2(0.261103, 0.649199)
+texture = ExtResource("1_pj57u")
+
+[node name="frame_top" type="Sprite2D" parent="frame"]
+position = Vector2(227.317, 604)
+scale = Vector2(0.375378, 0.284483)
+texture = ExtResource("2_tql6u")
+
+[node name="frame_bottom" type="Sprite2D" parent="frame"]
+position = Vector2(226.5, 1034)
+scale = Vector2(0.377066, 0.249999)
+texture = ExtResource("3_ekboh")
+
+[node name="frame_right" type="Sprite2D" parent="frame"]
+position = Vector2(401, 819)
+scale = Vector2(0.268319, 0.649199)
+texture = ExtResource("4_7u53b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 48.0
+offset_top = 600.0
+offset_right = 403.0
+offset_bottom = 1031.0
+color = Color(0, 0, 0, 0.72549)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = 613.0
+offset_right = 393.0
+offset_bottom = -55.0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_8ub4a")
+theme_override_font_sizes/font_size = 30
+text = "Legend"
+horizontal_alignment = 1
+
+[node name="oil_container" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/oil_container"]
+layout_mode = 2
+theme = ExtResource("2_qcp3v")
+button_pressed = true
+
+[node name="Label" type="Label" parent="VBoxContainer/oil_container"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_uglnd")
+theme_override_font_sizes/font_size = 25
+text = "  Polycarbonate"
+
+[node name="bauxite_container" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/bauxite_container"]
+layout_mode = 2
+theme = ExtResource("2_qcp3v")
+theme_override_icons/checked = ExtResource("18_ghbde")
+theme_override_icons/unchecked = ExtResource("19_qqork")
+button_pressed = true
+
+[node name="Label" type="Label" parent="VBoxContainer/bauxite_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uglnd")
+theme_override_font_sizes/font_size = 25
+text = "  Bauxite"
+
+[node name="metal_container" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/metal_container"]
+layout_mode = 2
+theme = ExtResource("2_qcp3v")
+theme_override_icons/checked = ExtResource("8_8cao4")
+theme_override_icons/unchecked = ExtResource("9_5bmmq")
+button_pressed = true
+
+[node name="Label" type="Label" parent="VBoxContainer/metal_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uglnd")
+theme_override_font_sizes/font_size = 25
+text = "  Aluminum coating"
+
+[node name="precious_container" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/precious_container"]
+layout_mode = 2
+theme = ExtResource("2_qcp3v")
+theme_override_icons/checked = ExtResource("10_mhtej")
+theme_override_icons/unchecked = ExtResource("11_hcmg5")
+button_pressed = true
+
+[node name="Label" type="Label" parent="VBoxContainer/precious_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uglnd")
+theme_override_font_sizes/font_size = 25
+text = "  Clear lacquer"
+
+[node name="record_container" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/record_container"]
+layout_mode = 2
+theme = ExtResource("2_qcp3v")
+theme_override_icons/checked = ExtResource("12_c5pii")
+theme_override_icons/unchecked = ExtResource("13_e0t2n")
+button_pressed = true
+
+[node name="Label" type="Label" parent="VBoxContainer/record_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uglnd")
+theme_override_font_sizes/font_size = 25
+text = "  Recording"
+
+[node name="manufac_container" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/manufac_container"]
+layout_mode = 2
+theme = ExtResource("2_qcp3v")
+theme_override_icons/checked = ExtResource("14_epwlh")
+theme_override_icons/unchecked = ExtResource("15_rpfny")
+button_pressed = true
+
+[node name="Label" type="Label" parent="VBoxContainer/manufac_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uglnd")
+theme_override_font_sizes/font_size = 25
+text = "  Manufacturing"
+
+[node name="dsitrib_container" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/dsitrib_container"]
+layout_mode = 2
+theme = ExtResource("2_qcp3v")
+theme_override_icons/checked = ExtResource("16_duwsf")
+theme_override_icons/unchecked = ExtResource("17_vksuy")
+button_pressed = true
+
+[node name="Label" type="Label" parent="VBoxContainer/dsitrib_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uglnd")
+theme_override_font_sizes/font_size = 25
+text = "  Distribution"
+
+[node name="waste_container" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/waste_container"]
+layout_mode = 2
+theme = ExtResource("2_qcp3v")
+theme_override_icons/checked = ExtResource("18_ghbde")
+theme_override_icons/unchecked = ExtResource("19_qqork")
+button_pressed = true
+
+[node name="Label" type="Label" parent="VBoxContainer/waste_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uglnd")
+theme_override_font_sizes/font_size = 25
+text = "  Recyling and Waste"

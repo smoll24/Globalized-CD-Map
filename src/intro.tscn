@@ -1,0 +1,141 @@
+[gd_scene load_steps=13 format=3 uid="uid://bwscfadp14dr3"]
+
+[ext_resource type="Script" path="res://src/intro.gd" id="1_34fqf"]
+[ext_resource type="Texture2D" uid="uid://cnks71yf07apk" path="res://assets/ui/DarkOakFrameLeft.png" id="1_byby1"]
+[ext_resource type="Texture2D" uid="uid://bxlv0q7v3amgr" path="res://assets/ui/DarkOakFrameTop.png" id="2_3mkau"]
+[ext_resource type="Texture2D" uid="uid://b7kh14tvy88ms" path="res://assets/ui/DarkOakFrameBottom.png" id="3_stg1b"]
+[ext_resource type="Texture2D" uid="uid://ceprvqk1y5l35" path="res://assets/ui/DarkOakFrameRight.png" id="4_c00rv"]
+[ext_resource type="Texture2D" uid="uid://bxj7e8euivlbd" path="res://assets/hatchet.png" id="5_5xf7k"]
+[ext_resource type="FontFile" uid="uid://bocxbwg1vpijp" path="res://assets/fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf" id="6_aguxk"]
+[ext_resource type="FontFile" uid="uid://bf7hq10acq6ja" path="res://assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf" id="7_3g4uq"]
+[ext_resource type="FontFile" uid="uid://cs7yelj0p133f" path="res://assets/fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf" id="8_03d30"]
+[ext_resource type="FontFile" uid="uid://dlcj0vvtpgixn" path="res://assets/fonts/Roboto/static/Roboto-SemiBold.ttf" id="9_joge5"]
+[ext_resource type="Texture2D" uid="uid://djrqo28t2s0lh" path="res://assets/ui/CD_icon_test.svg.png" id="11_77ntm"]
+[ext_resource type="Script" path="res://src/ui/cd_sprite.gd" id="12_knhtq"]
+
+[node name="intro" type="CanvasLayer"]
+script = ExtResource("1_34fqf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.138719, 0.0993394, 0.0548416, 1)
+
+[node name="frame" type="Node2D" parent="."]
+
+[node name="frame_left" type="Sprite2D" parent="frame"]
+position = Vector2(14.75, 559.5)
+scale = Vector2(0.611111, 1.76856)
+texture = ExtResource("1_byby1")
+
+[node name="frame_top" type="Sprite2D" parent="frame"]
+position = Vector2(944, 16)
+scale = Vector2(2.11983, 0.655172)
+texture = ExtResource("2_3mkau")
+
+[node name="frame_bottom" type="Sprite2D" parent="frame"]
+position = Vector2(1008.5, 1067.5)
+scale = Vector2(2.08988, 0.557143)
+texture = ExtResource("3_stg1b")
+
+[node name="frame_right" type="Sprite2D" parent="frame"]
+position = Vector2(1900, 559.5)
+scale = Vector2(0.666666, 1.86172)
+texture = ExtResource("4_c00rv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(480, 444)
+texture = ExtResource("5_5xf7k")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 112.0
+offset_top = 97.0
+offset_right = 545.0
+offset_bottom = 193.0
+theme_override_colors/font_color = Color(0.803922, 0.615686, 0.439216, 1)
+theme_override_fonts/font = ExtResource("6_aguxk")
+theme_override_font_sizes/font_size = 70
+text = "Introduction"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = -1
+anchor_right = 0.081
+offset_left = 952.0
+offset_top = 139.0
+offset_right = 1664.48
+offset_bottom = 943.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = 20
+theme_override_fonts/normal_font = ExtResource("7_3g4uq")
+theme_override_fonts/italics_font = ExtResource("8_03d30")
+theme_override_fonts/bold_font = ExtResource("9_joge5")
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "Last semester, I bought a used CD copy of the album [i]Bury the Hatchet[/i] by the Cranberries for $1 at the Webster Public Library.
+
+But how did it get there, and where did it come from?"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 726.0
+offset_right = 870.0
+offset_bottom = 822.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_aguxk")
+theme_override_font_sizes/font_size = 50
+text = "Bury the Hatchet (1999)"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 793.0
+offset_right = 870.0
+offset_bottom = 889.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_aguxk")
+theme_override_font_sizes/font_size = 40
+text = "The Cranberries"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1086.0
+offset_top = 693.0
+offset_right = -284.0
+offset_bottom = -244.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.639216, 0.486275, 0.341176, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1090.0
+offset_top = 697.0
+offset_right = 1633.0
+offset_bottom = 832.0
+theme_override_fonts/font = ExtResource("6_aguxk")
+theme_override_font_sizes/font_size = 50
+text = "Continue"
+
+[node name="Label4" type="Label" parent="."]
+visible = false
+offset_left = 56.0
+offset_top = 1001.0
+offset_right = 526.0
+offset_bottom = 1049.0
+theme_override_colors/font_color = Color(0.803922, 0.615686, 0.439216, 1)
+theme_override_fonts/font = ExtResource("6_aguxk")
+theme_override_font_sizes/font_size = 27
+text = "Project by Sam Moll for Anth 210"
+
+[node name="cd_sprite" type="Sprite2D" parent="."]
+position = Vector2(1686, 870)
+scale = Vector2(0.179167, 0.179167)
+texture = ExtResource("11_77ntm")
+script = ExtResource("12_knhtq")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
